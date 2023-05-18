@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Fare la spesa",
+    "done": false
+  },
+  {
+    "text": "Bere la birra",
+    "done": true
+  },
+  {
+    "text": "Pulire il codice",
+    "done": false
+  }
+]

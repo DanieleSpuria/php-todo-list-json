@@ -34,9 +34,9 @@
         <li
           class="note"
         >
-        <span>coseLista</span>
-        <i
-          class="fa-solid fa-trash"
+          <span>coseLista</span>
+          <i
+            class="fa-solid fa-trash"
           ></i>
         </li>
       </ul>
