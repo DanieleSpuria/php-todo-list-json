@@ -35,10 +35,10 @@
       <ul>
         <!-- <p >Vuoto</p> -->
         <li
-          v-for="item in list"
+          v-for="(item, i) in list"
           class="note"
           :class="{'done' : item.done === true}"
-          @click="item.done = !item.done"
+          @click.stop="item.done = !item.done"
         >
           <span>{{ item.text }}</span>
           <i

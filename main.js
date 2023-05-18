@@ -35,7 +35,16 @@ createApp({
 
     rmv(item, i) {
       this.msg = '';
-      if (item.done === true) this.list.splice(i,1);
+      if (item.done === true) {
+        const data = new FormData();
+        data.append('index', i)
+
+        axios.post(this.api, data)
+        .then(result => {
+          this.list = result.data;
+          console.log(this.list);
+        })
+      }
       else {
         this.message('Questo non lo hai ancora fatto!');
       }
