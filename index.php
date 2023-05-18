@@ -31,7 +31,7 @@
       <h2>{{ msg }}</h2>
     </div>
 
-    <div class="container">
+    <div v-if="load" class="container">
       <ul>
         <p v-if="list.length === 0">Vuoto</p>
         <li
@@ -48,7 +48,6 @@
         </li>
       </ul>
     </div>
-
   </div>
   <script src="main.js"></script>
 </body>
