@@ -38,12 +38,12 @@
           v-for="(item, i) in list"
           class="note"
           :class="{'done' : item.done === true}"
-          @click.stop="item.done = !item.done"
+          @click="item.done = !item.done"
         >
           <span>{{ item.text }}</span>
           <i
             class="fa-solid fa-trash"
-            @click="rmv(item, i)"
+            @click.stop="rmv(item, i)"
           ></i>
         </li>
       </ul>
