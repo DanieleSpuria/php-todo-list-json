@@ -37,6 +37,7 @@
         <li
           v-for="item in list"
           class="note"
+          :class="{'done' : item.done === true}"
         >
           <span>{{ item.text }}</span>
           <i
