@@ -6,7 +6,6 @@ createApp({
       api: 'server.php',
       list: [],
       newNote: '',
-      new: {},
       msg: ''
     }
   },
@@ -22,11 +21,14 @@ createApp({
     add() {
       if (this.newNote.length <= 4) this.message('La nota è troppo breve!');
       else {
-        this.new = {
-          text: this.newNote,
-          done: false
-        };
-        this.list.unshift(this.new);
+        const data = new FormData();
+        data.append('text', this.newNote)
+
+        axios.post(this.api, data)
+        .then(result => {
+          this.list = result.data;
+          console.log(this.list);
+        })
       }
       this.newNote = ''
     },
