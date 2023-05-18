@@ -24,7 +24,7 @@
         @keyup.enter="add"
       >
       <button @click="add" >Aggiungi</button>
-      <button >Svuota</button>
+      <button @click="empty" >Svuota</button>
     </div>
 
     <div class="message">
@@ -33,7 +33,7 @@
 
     <div class="container">
       <ul>
-        <!-- <p >Vuoto</p> -->
+        <p v-if="list.length === 0">Vuoto</p>
         <li
           v-for="(item, i) in list"
           class="note"

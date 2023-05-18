@@ -8,15 +8,17 @@
       'text' => $_POST['text'],
       'done' => false
     ];
-    
     array_unshift($list, $newNote);
-
     file_put_contents('toDoList.json', json_encode($list));
   }
 
   if(isset($_POST['index'])) {
     array_splice($list, $_POST['index'], 1);
+    file_put_contents('toDoList.json', json_encode($list));
+  }
 
+  if(isset($_POST['empty'])) {
+    $list = [];
     file_put_contents('toDoList.json', json_encode($list));
   }
 

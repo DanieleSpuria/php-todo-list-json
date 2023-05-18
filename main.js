@@ -22,7 +22,7 @@ createApp({
       if (this.newNote.length <= 4) this.message('La nota è troppo breve!');
       else {
         const data = new FormData();
-        data.append('text', this.newNote)
+        data.append('text', this.newNote);
 
         axios.post(this.api, data)
         .then(result => {
@@ -37,7 +37,7 @@ createApp({
       this.msg = '';
       if (item.done === true) {
         const data = new FormData();
-        data.append('index', i)
+        data.append('index', i);
 
         axios.post(this.api, data)
         .then(result => {
@@ -48,6 +48,17 @@ createApp({
       else {
         this.message('Questo non lo hai ancora fatto!');
       }
+    },
+
+    empty() {
+      const data = new FormData();
+      data.append('empty', true);
+
+      axios.post(this.api, data)
+      .then(result => {
+        this.list = result.data;
+        console.log(this.list);
+      })
     },
 
     message(msg) {
