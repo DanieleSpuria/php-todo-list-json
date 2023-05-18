@@ -13,7 +13,6 @@ createApp({
       axios.get(this.api)
       .then(result => {
         this.list = result.data;
-        console.log(this.list);
       })
     }
   },

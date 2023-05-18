@@ -33,16 +33,17 @@
       <ul>
         <!-- <p >Vuoto</p> -->
         <li
+          v-for="item in list"
           class="note"
         >
-          <span>coseLista</span>
+          <span>{{ item.text }}</span>
           <i
             class="fa-solid fa-trash"
           ></i>
         </li>
       </ul>
     </div>
-    
+
   </div>
   <script src="main.js"></script>
 </body>
