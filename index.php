@@ -10,11 +10,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">n
+  <link rel="stylesheet" href="style.css">
   <title>PHP ToDo List JSON</title>
 </head>
 <body>
   <div id="app">
+
     <div class="input-invio">
       <input
         type="text"
@@ -41,6 +42,7 @@
         </li>
       </ul>
     </div>
+    
   </div>
   <script src="main.js"></script>
 </body>
