@@ -20,13 +20,15 @@
       <input
         type="text"
         placeholder="Scrivi nota da aggiungere"
+        v-model.trim="newNote"
+        @keyup.enter="add"
       >
-      <button >Aggiungi</button>
+      <button @click="add" >Aggiungi</button>
       <button >Svuota</button>
     </div>
 
     <div class="message">
-      <h2></h2>
+      <h2>{{ msg }}</h2>
     </div>
 
     <div class="container">
