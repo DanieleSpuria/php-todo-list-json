@@ -25,7 +25,6 @@ createApp({
 
       if (this.newNote.length <= 4) {
         this.message('La nota è troppo breve!');
-        this.load = true;
       } else {
         const data = new FormData();
         data.append('text', this.newNote);
@@ -33,10 +32,10 @@ createApp({
         axios.post(this.api, data)
         .then(result => {
           this.list = result.data;
-          this.load = true
         })
       }
       
+      this.load = true;
       this.newNote = '';
     },
 
@@ -51,13 +50,13 @@ createApp({
         axios.post(this.api, data)
         .then(result => {
           this.list = result.data;
-          this.load = true
         })
       }
       else {
         this.message('Questo non lo hai ancora fatto!');
-        this.load = false;
       }
+
+      this.load = true
     },
 
     empty() {
@@ -69,8 +68,9 @@ createApp({
       axios.post(this.api, data)
       .then(result => {
         this.list = result.data;
-        this.load = true
       })
+      
+      this.load = true
     },
 
     message(msg) {
