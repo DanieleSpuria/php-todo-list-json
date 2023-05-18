@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+}
+
+p{
+  text-align: center;
+}
+
+.input-invio{
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-invio input,
+.input-invio button{
+  margin-right: 10px;
+  padding: 0 20px;
+} 
+
+.message{
+  display: block;
+  margin: 15px;
+  height: 30px;
+  text-align: center;
+  color: red;
+}
+
+.container{
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: lightgoldenrodyellow;
+  border-radius: 10px;
+}
+
+.note{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+}
+
+.note i{
+  font-size: 18px; 
+  color: grey;
+}
+
+.note i:hover{
+  color: lightblue;
+}
+
+.done :not(i){
+  text-decoration: line-through;
+}
