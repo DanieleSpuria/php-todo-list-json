@@ -33,6 +33,14 @@ createApp({
       this.newNote = ''
     },
 
+    rmv(item, i) {
+      this.msg = '';
+      if (item.done === true) this.list.splice(i,1);
+      else {
+        this.message('Questo non lo hai ancora fatto!');
+      }
+    },
+
     message(msg) {
       this.msg = msg;
       setTimeout(() => this.msg = '', 1000);

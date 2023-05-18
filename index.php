@@ -42,6 +42,7 @@
           <span>{{ item.text }}</span>
           <i
             class="fa-solid fa-trash"
+            @click="rmv(item, i)"
           ></i>
         </li>
       </ul>
