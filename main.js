@@ -27,7 +27,6 @@ createApp({
         axios.post(this.api, data)
         .then(result => {
           this.list = result.data;
-          console.log(this.list);
         })
       }
       this.newNote = ''
@@ -42,7 +41,6 @@ createApp({
         axios.post(this.api, data)
         .then(result => {
           this.list = result.data;
-          console.log(this.list);
         })
       }
       else {
@@ -57,7 +55,6 @@ createApp({
       axios.post(this.api, data)
       .then(result => {
         this.list = result.data;
-        console.log(this.list);
       })
     },
 
