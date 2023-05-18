@@ -38,6 +38,7 @@
           v-for="item in list"
           class="note"
           :class="{'done' : item.done === true}"
+          @click="item.done = !item.done"
         >
           <span>{{ item.text }}</span>
           <i
